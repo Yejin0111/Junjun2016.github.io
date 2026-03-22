@@ -1,0 +1,662 @@
+/* ========== Reset & Base ========== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Lato', 'Helvetica Neue', Arial, sans-serif;
+  font-size: 15px;
+  color: #333;
+  background-color: #f7f8fa;
+  line-height: 1.6;
+}
+
+a {
+  color: #1a5276;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+a:hover {
+  color: #e67e22;
+}
+
+/* ========== Navigation ========== */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: #1a2332;
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.navbar-inner {
+  max-width: 960px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 20px;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+}
+
+.nav-links li a {
+  display: block;
+  color: #aaa;
+  padding: 15px 20px;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0.3px;
+  transition: color 0.2s, background 0.2s;
+}
+
+.nav-links li a:hover,
+.nav-links li a.active {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.07);
+}
+
+/* ========== Layout ========== */
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.page-body {
+  margin-top: 70px;
+}
+
+/* ========== Card ========== */
+.card {
+  background: #fff;
+  border-radius: 8px;
+  padding: 2em 2.5em;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+  margin-bottom: 1.8em;
+}
+
+.card h2 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #1a2332;
+  margin-bottom: 1em;
+  padding-bottom: 0.5em;
+  border-bottom: 2px solid #e8e8e8;
+}
+
+.card h3 {
+  font-size: 16px;
+  font-weight: 700;
+  color: #2c3e50;
+  margin-top: 1.4em;
+  margin-bottom: 0.6em;
+}
+
+/* ========== Hero (index.html) ========== */
+.hero {
+  display: flex;
+  align-items: center;
+  gap: 2.8em;
+}
+
+.hero-photo {
+  width: 190px;
+  height: 190px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+  border: 3px solid #e8e8e8;
+}
+
+.hero-info h1 {
+  font-size: 30px;
+  font-weight: 700;
+  color: #1a2332;
+  margin-bottom: 4px;
+}
+
+.hero-info .title {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 3px;
+}
+
+.hero-info .affiliation {
+  font-size: 14px;
+  color: #777;
+  margin-bottom: 14px;
+}
+
+.hero-info .bio-brief {
+  font-size: 14.5px;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 14px;
+}
+
+.hero-links {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.hero-links a {
+  font-size: 14px;
+  color: #555;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.hero-links a:hover {
+  color: #e67e22;
+}
+
+.hero-links i {
+  font-size: 16px;
+}
+
+/* ========== Highlight boxes on Home ========== */
+.highlights {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.2em;
+}
+
+.highlight-box {
+  background: #fff;
+  border-radius: 8px;
+  padding: 1.5em 1.8em;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+  transition: box-shadow 0.2s;
+}
+
+.highlight-box:hover {
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+}
+
+.highlight-box h3 {
+  font-size: 15px;
+  font-weight: 700;
+  color: #1a2332;
+  margin-bottom: 0.5em;
+}
+
+.highlight-box h3 i {
+  margin-right: 6px;
+  color: #1a5276;
+}
+
+.highlight-box p,
+.highlight-box li {
+  font-size: 13.5px;
+  color: #666;
+  line-height: 1.5;
+}
+
+.highlight-box ul {
+  list-style: none;
+  padding: 0;
+}
+
+.highlight-box ul li {
+  padding: 3px 0;
+}
+
+.highlight-box .more-link {
+  display: inline-block;
+  margin-top: 0.8em;
+  font-size: 13px;
+  color: #1a5276;
+  font-weight: 600;
+}
+
+/* ========== Bio text ========== */
+.bio-text {
+  line-height: 1.75;
+  color: #444;
+  font-size: 14.5px;
+}
+
+.bio-text p {
+  margin-bottom: 0.8em;
+}
+
+/* ========== Timeline ========== */
+.timeline {
+  list-style: none;
+}
+
+.timeline li {
+  position: relative;
+  padding-left: 22px;
+  margin-bottom: 0.7em;
+  font-size: 14px;
+  color: #444;
+}
+
+.timeline li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 8px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #1a5276;
+}
+
+.timeline .time {
+  font-weight: 700;
+  color: #1a2332;
+  min-width: 100px;
+  display: inline-block;
+}
+
+.timeline .role {
+  font-weight: 600;
+}
+
+.timeline .org {
+  color: #666;
+}
+
+/* ========== Research interests ========== */
+.interests-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1em;
+}
+
+.interest-item {
+  background: #f7f8fa;
+  border-radius: 6px;
+  padding: 1em 1.2em;
+}
+
+.interest-item h4 {
+  font-size: 14px;
+  font-weight: 700;
+  color: #1a2332;
+  margin-bottom: 0.3em;
+}
+
+.interest-item p {
+  font-size: 13px;
+  color: #666;
+  line-height: 1.5;
+}
+
+/* ========== Awards ========== */
+.awards-list {
+  list-style: none;
+}
+
+.awards-list li {
+  padding: 0.45em 0;
+  font-size: 14px;
+  color: #444;
+}
+
+.awards-list li i {
+  color: #e67e22;
+  margin-right: 8px;
+  width: 16px;
+}
+
+/* ========== Publications ========== */
+.pub-stats {
+  background: #f7f8fa;
+  border-radius: 6px;
+  padding: 1em 1.5em;
+  margin-bottom: 1.5em;
+  font-size: 14px;
+  color: #555;
+}
+
+.pub-stats a {
+  font-weight: 600;
+}
+
+.pub-year-divider {
+  font-size: 18px;
+  font-weight: 700;
+  color: #1a2332;
+  margin-top: 1.8em;
+  margin-bottom: 0.6em;
+  padding-bottom: 0.3em;
+  border-bottom: 1px solid #eee;
+}
+
+.pub-year-divider:first-of-type {
+  margin-top: 0.5em;
+}
+
+.pub-item {
+  display: flex;
+  gap: 1.2em;
+  padding: 1em 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.pub-item:last-of-type {
+  border-bottom: none;
+}
+
+.pub-thumb {
+  width: 180px;
+  min-width: 180px;
+  height: auto;
+  border-radius: 4px;
+  object-fit: contain;
+  align-self: flex-start;
+}
+
+.pub-info {
+  flex: 1;
+}
+
+.pub-title {
+  font-weight: 700;
+  font-size: 14px;
+  color: #1a2332;
+  margin-bottom: 4px;
+  line-height: 1.45;
+}
+
+.pub-authors {
+  font-size: 13px;
+  color: #666;
+  margin-bottom: 4px;
+  line-height: 1.4;
+}
+
+.pub-authors .me {
+  font-weight: 700;
+  color: #333;
+  text-decoration: underline;
+}
+
+.pub-venue {
+  font-size: 13px;
+  color: #888;
+  margin-bottom: 6px;
+}
+
+.pub-venue b {
+  color: #c0392b;
+}
+
+/* Text-only pub item (no thumbnail) */
+.pub-item-text {
+  padding: 0.9em 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.pub-item-text:last-of-type {
+  border-bottom: none;
+}
+
+.pub-item-text .pub-title {
+  font-weight: 700;
+  font-size: 14.5px;
+  color: #1a2332;
+  margin-bottom: 5px;
+  line-height: 1.45;
+}
+
+.pub-item-text .pub-authors {
+  font-size: 13.5px;
+  color: #666;
+  margin-bottom: 4px;
+  line-height: 1.5;
+}
+
+.pub-item-text .pub-authors .me {
+  font-weight: 700;
+  color: #333;
+  text-decoration: underline;
+}
+
+.pub-item-text .pub-venue {
+  font-size: 13px;
+  color: #888;
+  margin-bottom: 6px;
+}
+
+.pub-item-text .pub-venue b {
+  color: #c0392b;
+}
+
+.cite-count {
+  display: inline-block;
+  background: #eef2f7;
+  color: #1a5276;
+  font-size: 11.5px;
+  font-weight: 600;
+  padding: 1px 8px;
+  border-radius: 3px;
+  margin-left: 4px;
+  vertical-align: middle;
+}
+
+.pub-links a {
+  display: inline-block;
+  font-size: 12px;
+  padding: 2px 10px;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  color: #555;
+  margin-right: 6px;
+  transition: all 0.2s;
+}
+
+.pub-links a:hover {
+  border-color: #e67e22;
+  color: #e67e22;
+}
+
+.pub-full-list {
+  list-style: none;
+}
+
+.pub-full-list li {
+  padding: 0.5em 0;
+  font-size: 13.5px;
+  color: #444;
+  line-height: 1.55;
+  border-bottom: 1px solid #f5f5f5;
+}
+
+.pub-full-list li:last-child {
+  border-bottom: none;
+}
+
+.pub-full-list .me {
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+/* ========== Team ========== */
+.opening-box {
+  background: linear-gradient(135deg, #fef9e7, #fdebd0);
+  border-left: 4px solid #e67e22;
+  border-radius: 4px;
+  padding: 1em 1.5em;
+  margin-bottom: 1.5em;
+  font-size: 14px;
+  color: #7d6608;
+}
+
+.opening-box strong {
+  color: #c0392b;
+}
+
+.team-group {
+  margin-bottom: 1.5em;
+}
+
+.team-sub-title {
+  font-size: 14px;
+  color: #888;
+  font-weight: 400;
+  margin-top: 0.8em;
+  margin-bottom: 0.4em;
+}
+
+.team-member {
+  padding: 0.4em 0;
+  font-size: 14px;
+  color: #444;
+}
+
+.team-member .name {
+  font-weight: 600;
+}
+
+.team-member .info {
+  color: #888;
+  font-size: 13px;
+}
+
+/* ========== News ========== */
+.news-list {
+  list-style: none;
+}
+
+.news-list li {
+  padding: 0.5em 0;
+  font-size: 14px;
+  color: #444;
+  border-bottom: 1px solid #f5f5f5;
+}
+
+.news-list li:last-child {
+  border-bottom: none;
+}
+
+.news-date {
+  font-weight: 700;
+  color: #1a2332;
+  display: inline-block;
+  min-width: 80px;
+}
+
+.news-list b {
+  color: #c0392b;
+}
+
+/* ========== Contact / Footer ========== */
+.footer {
+  background: #1a2332;
+  color: #aaa;
+  margin-top: 3em;
+  padding: 2em 0;
+}
+
+.footer-inner {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2em;
+}
+
+.footer h4 {
+  color: #fff;
+  font-size: 14px;
+  margin-bottom: 0.6em;
+}
+
+.footer p {
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+.footer a {
+  color: #ccc;
+}
+
+.footer a:hover {
+  color: #e67e22;
+}
+
+.footer i {
+  width: 18px;
+  margin-right: 4px;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 1.5em;
+  margin-top: 1.5em;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 12px;
+  color: #666;
+}
+
+/* ========== Responsive ========== */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    gap: 1.5em;
+  }
+
+  .hero-links {
+    justify-content: center;
+  }
+
+  .card {
+    padding: 1.5em;
+  }
+
+  .highlights {
+    grid-template-columns: 1fr;
+  }
+
+  .interests-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .pub-item {
+    flex-direction: column;
+  }
+
+  .pub-thumb {
+    width: 100%;
+    min-width: auto;
+    max-width: 300px;
+  }
+
+  .nav-links li a {
+    padding: 12px 12px;
+    font-size: 13px;
+  }
+
+  .navbar .site-name {
+    font-size: 14px;
+  }
+
+  .footer-inner {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-links li a {
+    padding: 10px 8px;
+    font-size: 12px;
+  }
+}
